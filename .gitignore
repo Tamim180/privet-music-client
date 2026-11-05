@@ -144,3 +144,4 @@ app.*.symbols
 
 
 /assets/*.env
+ytmusic_cookie*

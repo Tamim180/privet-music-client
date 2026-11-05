@@ -6,6 +6,7 @@ import 'package:Bloomee/plugins/blocs/import/content_import_cubit.dart';
 import 'package:Bloomee/plugins/blocs/plugin/plugin_bloc.dart';
 import 'package:Bloomee/plugins/blocs/plugin/plugin_state.dart';
 import 'package:Bloomee/screens/widgets/snackbar.dart';
+import 'package:Bloomee/screens/screen/library_views/ytmusic_import.dart';
 import 'package:Bloomee/screens/widgets/backup_import_flow.dart';
 import 'package:Bloomee/services/m3u_processor.dart';
 import 'package:Bloomee/src/rust/api/plugin/models.dart';
@@ -85,6 +86,12 @@ class _ImportMediaFromPlatformsViewState
                     btnName: AppLocalizations.of(context)!.importM3UFiles,
                     btnIcon: MingCute.playlist_2_line,
                     onClickFunc: () => _importM3UFile(context),
+                  ),
+                  const SizedBox(height: 10),
+                  _ImportFromBtn(
+                    btnName: 'YouTube Music (cookie sync)',
+                    btnIcon: MingCute.playlist_2_line,
+                    onClickFunc: () => startYtMusicImport(context),
                   ),
                 ],
               );
